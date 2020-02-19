@@ -5,9 +5,9 @@ import kg.geektech.game.players.*;
 public class RPG_Game {
     public static void start() {
         Boss boss = new Boss(400, 50);
-        Warrior warrior = new Warrior(230, 10);
-        Tank tank = new Tank(210, 10, 25);
-        Magic magic = new Magic(260, 10, 15);
+        Warrior warrior = new Warrior(230, 10, 0);
+        Tank tank = new Tank(210, 10, 15);
+        Magic magic = new Magic(260, 10, 10);
         Medic medic = new Medic(250, 2, 100);
         Medic youngMedic = new Medic(290, 5, 50);
 
@@ -18,8 +18,6 @@ public class RPG_Game {
             round(boss, heroes);
         }
     }
-
-
     private static void heroesApplySuperAbilities(Boss boss, Hero[] heroes) {
         for (int i = 0; i < heroes.length; i++) {
             heroes[i].applySuperAbility(boss, heroes);

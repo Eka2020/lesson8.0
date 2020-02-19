@@ -20,15 +20,12 @@ public class Tank extends Hero {
 
             @Override
         public void applySuperAbility (Boss boss, Hero[]heroes) {
-                for (int i = 0; i < heroes.length; i++) {
-                    if (!heroes[i].getAbility().equals(SuperAbility.SAVE_DAMAGE_AND_REVERT) &&
-                            this.getHealth() > 0 && heroes[i].getHealth() > 0 && boss.getHealth() > 0) {
-                      boss.setDamage(this.getDamage() + mirroredDamage);
+                boss.setHealth(boss.getHealth() - mirroredDamage);
 
 
                     }
-                }
-            }
+
+
     }
 
 
