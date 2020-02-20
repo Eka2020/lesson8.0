@@ -7,7 +7,7 @@ public class Tank extends Hero {
     public Tank(int health, int damage, int selectedDamage) {
         super(health, damage, SuperAbility.SAVE_DAMAGE_AND_REVERT);
         this.mirroredDamage = selectedDamage;
-        
+
     }
 
     public int getMirroredDamage() {

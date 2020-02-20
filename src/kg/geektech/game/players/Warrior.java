@@ -10,7 +10,7 @@ public class Warrior extends Hero {
 
       private int critDamage;
 
-    public Warrior(int health, int damage, int critDamage) {
+    public Warrior(int health, int damage) {
         super(health, damage, SuperAbility.CRITICAL_DAMAGE);
         this.critDamage = critDamage;
     }
@@ -26,8 +26,6 @@ public class Warrior extends Hero {
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
         Random rand = new Random();
-        for (int i = 2; i < 4; i++) {
-        }
         boss.setHealth(boss.getHealth() - (critDamage * rand.nextInt(4)));
 
     }

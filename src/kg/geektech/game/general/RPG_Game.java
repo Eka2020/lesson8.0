@@ -5,8 +5,8 @@ import kg.geektech.game.players.*;
 public class RPG_Game {
     public static void start() {
         Boss boss = new Boss(400, 50);
-        Warrior warrior = new Warrior(230, 10, 0);
-        Tank tank = new Tank(210, 10, 15);
+        Warrior warrior = new Warrior(230, 2);
+        Tank tank = new Tank(210, 10, 20);
         Magic magic = new Magic(260, 10, 10);
         Medic medic = new Medic(250, 2, 100);
         Medic youngMedic = new Medic(290, 5, 50);
